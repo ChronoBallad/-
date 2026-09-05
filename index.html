@@ -1,44 +1,133 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" translate="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chrono Ballad</title>
+  <meta name="color-scheme" content="dark">
+  <meta name="google" content="notranslate">
+
+  <title>組曲【仮面舞踏会】</title>
 
   <style>
+    :root {
+      --bg: #000;
+      --fg: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
     body {
       margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: serif;
-      line-height: 2;
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    body {
+      font-family:
+        "Hiragino Mincho ProN",
+        "Yu Mincho",
+        "YuMincho",
+        "Noto Serif JP",
+        serif;
+      -webkit-text-size-adjust: 100%;
+      text-rendering: optimizeLegibility;
     }
 
     main {
-      max-width: 720px;
+      width: min(100%, 760px);
       margin: 0 auto;
-      padding: 80px 24px;
+      padding: 120px 24px 140px;
+      text-align: center;
     }
 
     h1 {
-      font-weight: normal;
-      text-align: center;
+      margin: 0;
+      font-size: clamp(34px, 8vw, 48px);
+      line-height: 1.5;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+
+    .opening {
+      margin-top: 54px;
+      font-size: clamp(19px, 4.8vw, 26px);
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+    }
+
+    .works {
+      margin-top: 110px;
+    }
+
+    .work {
+      margin: 0 0 42px;
+    }
+
+    .work a {
+      display: inline-block;
+      font-size: clamp(26px, 6vw, 34px);
+      line-height: 1.6;
+      font-weight: 400;
+      letter-spacing: 0.035em;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .work a:hover,
+    .work a:focus {
+      text-decoration: underline;
+    }
+
+    .work a:visited {
+      color: #fff;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        padding: 100px 22px 120px;
+      }
+
+      .works {
+        margin-top: 95px;
+      }
+
+      .work {
+        margin-bottom: 36px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <h1>Chrono Ballad</h1>
 
-    <p>
-      ───物語は、ここに。
+  <main>
+
+    <h1>組曲【仮面舞踏会】</h1>
+
+    <p class="opening">
+      ───物語は、ここから。
     </p>
+
+    <div class="works">
+
+      <p class="work">
+        <a href="index01.html">
+          組曲『仮面舞踏会』
+        </a>
+      </p>
+
+      <p class="work">
+        <a href="index02.html">
+          「Emblem of Persona」
+        </a>
+      </p>
+
+    </div>
+
   </main>
+
 </body>
 </html>
-
-
-<a href="index01.html">組曲『仮面舞踏会』</a>
-
-<a href="index02.html">「Emblem of Persona」</a>
