@@ -72,6 +72,8 @@
       font-weight: 400;
 
       letter-spacing: 0.04em;
+
+      white-space: nowrap;
     }
 
 
@@ -87,22 +89,28 @@
       line-height: 1.8;
 
       letter-spacing: 0.04em;
+
+      white-space: nowrap;
     }
 
 
     .works {
       margin-top: 110px;
+      width: 100%;
     }
 
 
     .work {
+      width: 100%;
       margin: 0;
       padding: 0;
     }
 
 
     .work-link {
-      display: inline-block;
+      display: block;
+
+      width: 100%;
 
       color: #fff;
 
@@ -121,11 +129,15 @@
     }
 
 
+    /*
+      副題を持つ作品の主題。
+      必ず一行に固定する。
+    */
     .work-title {
       display: block;
 
       font-size: clamp(
-        26px,
+        18px,
         6vw,
         34px
       );
@@ -135,17 +147,33 @@
       font-weight: 400;
 
       letter-spacing: 0.035em;
+
+      white-space: nowrap;
+      word-break: keep-all;
+      overflow-wrap: normal;
     }
 
 
+    /*
+      副題。
+      主題とは別の一行として固定。
+    */
     .work-subtitle {
       display: block;
 
       margin-top: 2px;
 
+      font-family:
+        Georgia,
+        "Times New Roman",
+        "Hiragino Mincho ProN",
+        "Yu Mincho",
+        "YuMincho",
+        serif;
+
       font-size: clamp(
-        21px,
-        5vw,
+        14px,
+        4.6vw,
         28px
       );
 
@@ -153,15 +181,23 @@
 
       font-weight: 400;
 
-      letter-spacing: 0.045em;
+      letter-spacing: 0;
+
+      white-space: nowrap;
+      word-break: keep-all;
+      overflow-wrap: normal;
     }
 
 
+    /*
+      副題なし作品。
+      すべて一行に固定。
+    */
     .single-title {
       display: block;
 
       font-size: clamp(
-        26px,
+        18px,
         6vw,
         34px
       );
@@ -171,21 +207,52 @@
       font-weight: 400;
 
       letter-spacing: 0.035em;
+
+      white-space: nowrap;
+      word-break: keep-all;
+      overflow-wrap: normal;
     }
 
 
     @media (max-width: 520px) {
 
+      /*
+        長い作品名へ横幅を渡すため、
+        ホームのみ左右余白をかなり縮小。
+      */
       main {
         padding:
           100px
-          22px
+          8px
           120px;
       }
 
 
       .works {
         margin-top: 95px;
+      }
+
+
+      .work-title,
+      .single-title {
+        font-size: clamp(
+          18px,
+          6vw,
+          28px
+        );
+
+        letter-spacing: 0.02em;
+      }
+
+
+      .work-subtitle {
+        font-size: clamp(
+          14px,
+          4.6vw,
+          22px
+        );
+
+        letter-spacing: 0;
       }
 
     }
